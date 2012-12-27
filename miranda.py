@@ -407,7 +407,7 @@ class upnp:
 
 		#Create the SOAP request
 		soapBody = 	'<?xml version="1.0"?>\n'\
-				'<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\n'\
+				'<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\n'\
 				'<SOAP-ENV:Body>\n'\
 				'\t<m:%s xmlns:m="%s">\n'\
 				'%s\n'\
