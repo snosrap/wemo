@@ -824,7 +824,7 @@ class upnp:
 def msearch(argc,argv,hp):
 	defaultST = "upnp:rootdevice"
 	st = "schemas-upnp-org"
-	myip = ''
+	myip = gethostbyname(gethostname())
 	lport = hp.port
 
 	if argc >= 3:
