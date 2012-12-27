@@ -339,18 +339,18 @@ class upnp:
 				self.updateCmdCompleter(self.ENUM_HOSTS)
 
 			#Print out some basic device info
-			print self.STARS
-			print "SSDP %s message from %s" % (messageType,host)
+			# print self.STARS
+			# print "SSDP %s message from %s" % (messageType,host)
 
-			if xmlFile:
-				foundLocation = True
-				print "XML file is located at %s" % xmlFile
+			# if xmlFile:
+			# 	foundLocation = True
+			# 	print "XML file is located at %s" % xmlFile
 
-			if upnpType:
-				print "Device is running %s"% upnpType
+			# if upnpType:
+			# 	print "Device is running %s"% upnpType
 
-			print self.STARS
-			print ''
+			# print self.STARS
+			# print ''
 			
 			return True
 
@@ -811,7 +811,7 @@ class upnp:
 										structPtr[host][device][service][action] = None
 			self.completer.commands[hostCommand][sendCommand] = structPtr
 		except Exception,e:
-			print "Error updating command completer structure; some command completion features might not work..."
+			pass # print "Error updating command completer structure; some command completion features might not work..."
 		return
 
 			
@@ -847,8 +847,8 @@ def msearch(argc,argv,hp):
 			request += header + ':' + value + "\r\n"	
 	request += "\r\n" 
 
-	print "Entering discovery mode for '%s', Ctl+C to stop..." % st
-	print ''
+	# print "Entering discovery mode for '%s', Ctl+C to stop..." % st
+	# print ''
 		
 	#Have to create a new socket since replies will be sent directly to our IP, not the multicast IP
 	server = hp.createNewListener(myip,lport)
@@ -872,7 +872,7 @@ def msearch(argc,argv,hp):
 				count += 1
 
 		except Exception, e:
-			print '\nDiscover mode halted...'
+			# print '\nDiscover mode halted...'
 			break
 
 #Passively listen for UPNP NOTIFY packets
