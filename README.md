@@ -1,7 +1,7 @@
 WeMo
 ====
 
-`wemo.py` contains a simple Python class for the [Belkin WeMo](http://www.amazon.com/gp/product/B0089WFPRO/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=snosrap06-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0089WFPRO) device.  It uses Miranda for UPnP.
+`wemo.py` contains a simple Python class for the [Belkin WeMo](http://www.amazon.com/gp/product/B0089WFPRO/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=snosrap02-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0089WFPRO) device.  It uses Miranda for UPnP.
 
 Files
 =====
