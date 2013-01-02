@@ -5,9 +5,8 @@ WeMo
 
 Files
 =====
-* `wemo.py` - the main class, supports turning the outlet on/off as well as changing the device's name
-* `miranda.py` - a slightly modified version of the [miranda](http://code.google.com/p/miranda-upnp/) client.
-* `test.py` - a simple Python program, which lists WeMos on the network along with their `binaryState` (on/off).
+* `wemo.py` - The main class, supports turning the outlet on/off as well as changing the device's name.  Running `python wemo.py` lists WeMos on the network along with their `binaryState` (on/off).
+* `miranda.py` - A slightly modified version of the [miranda](http://code.google.com/p/miranda-upnp/) client.
 
 Sample Usage
 ============
