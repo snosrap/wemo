@@ -121,7 +121,13 @@ class upnp:
 			#Set up server socket
 			self.ssock = socket(AF_INET,SOCK_DGRAM,IPPROTO_UDP)
 			self.ssock.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
-			
+
+			# BSD systems also need to set SO_REUSEPORT		
+			try:
+				self.ssock.setsockopt(SOL_SOCKET,SO_REUSEPORT,1)
+			except:
+				pass
+
 			#Only bind to this interface
 			if self.IFACE != None:
 				print '\nBinding to interface',self.IFACE,'...\n'
@@ -185,6 +191,11 @@ class upnp:
 		try:
 			newsock = socket(AF_INET,SOCK_DGRAM,IPPROTO_UDP)
 			newsock.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
+			# BSD systems also need to set SO_REUSEPORT
+			try:
+				newsock.setsockopt(SOL_SOCKET,SO_REUSEPORT,1)
+			except:
+				pass
 			newsock.bind((ip,port))
 			return newsock
 		except:
