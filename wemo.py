@@ -63,3 +63,8 @@ def search():
 		except Exception, e:
 			raise e
 	return wemos
+
+if __name__ == "__main__":
+	wemos = search()
+	for wemo in wemos:
+		print wemo.binaryState, wemo.friendlyName
