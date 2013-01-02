@@ -67,4 +67,4 @@ def search():
 if __name__ == "__main__":
 	wemos = search()
 	for wemo in wemos:
-		print wemo.binaryState, wemo.friendlyName
+		print "[*]" if wemo.binaryState else "[ ]", wemo.friendlyName
