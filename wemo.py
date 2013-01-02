@@ -61,7 +61,7 @@ def search():
 			if conn.ENUM_HOSTS[index]['deviceList']['controllee']['modelName'] == 'Socket':
 				wemos.append(WeMo(hostInfo))
 		except Exception, e:
-			raise e
+			pass
 	return wemos
 
 if __name__ == "__main__":
